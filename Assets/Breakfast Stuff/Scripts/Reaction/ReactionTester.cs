@@ -20,11 +20,13 @@ public class ReactionTester : MonoBehaviour
             // Queue the "sad" reaction for 3 seconds
             ReactionCommand reactionCommand = new ReactionCommand(reactionProfile.happySprite, 1f);
             reactionProfile.QueueReaction(reactionCommand);
+            Debug.Log("Queueing 'Happy' for 1 Second");
         } 
         if (Input.GetKeyDown(KeyCode.X)) {
             // Queue the "happy" reaction for 3 seconds
             ReactionCommand reactionCommand = new ReactionCommand(reactionProfile.sadSprite, 2f);
             reactionProfile.QueueReaction(reactionCommand);
+            Debug.Log("Queueing 'Sad' for 3 Seconds");
         }
     }
 }
