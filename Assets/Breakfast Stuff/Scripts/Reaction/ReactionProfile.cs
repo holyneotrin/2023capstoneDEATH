@@ -12,6 +12,7 @@ public class ReactionProfile : MonoBehaviour
 
     private List<ReactionCommand> reactionCommandList = new List<ReactionCommand>();
     private Image reactionImage; //This is the actual image of the npc
+    private SpriteSquish spriteSquish;
 
     //-------------------------------------------------------------------------------
 
@@ -19,6 +20,9 @@ public class ReactionProfile : MonoBehaviour
         //Setup the reactionImage component
         reactionImage = GetComponent<Image>();
         reactionImage.sprite = defaultSprite;
+        
+        //Setup sprite squishing
+        spriteSquish = GetComponent<SpriteSquish>();
     }
 
     void Update() {
@@ -33,6 +37,9 @@ public class ReactionProfile : MonoBehaviour
             // If the duration <= 0, remove the command from the list.
             if (currentCommand.Duration <= 0f) {
                 reactionCommandList.RemoveAt(0); //Remove the first command.
+
+                //For testing do a bounce
+                StartCoroutine(spriteSquish.Bounce());
             }
         } else {
             // Otherwise, show default.
