@@ -216,12 +216,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 268837553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed123b29ba6c5b14cb3ec725c4e8088e, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b3e890a6fc75d04d9f8f3d3e2a7d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 21300000, guid: 4719b7c3de343d342bd47e0da50a80e1, type: 3}
-  happySprite: {fileID: 21300000, guid: 51d089b549bda984ab351d336ec2a786, type: 3}
-  sadSprite: {fileID: 21300000, guid: 90754da2ddd850040a3dec03ebebd27e, type: 3}
+  defaultSprite: {fileID: 21300000, guid: f30408275f6879c4f906a1d11769b47e, type: 3}
+  happySprite: {fileID: 21300000, guid: cf4e1ad702f705d4c8ddc2f5ca63f4d8, type: 3}
+  sadSprite: {fileID: 21300000, guid: a81fad2656772a14c80025e931a13288, type: 3}
 --- !u!114 &268837555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 268837553}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd148565d5a08844e94d225e0ee7e093, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a4767ca0590f19428c2c7dd1b578193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   yBounceCurve:
@@ -435,7 +435,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9ff0b151ec9eaf34192f21be560f2df6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f429a1b94eead074892984bfd5cb37b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -556,7 +556,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1110715655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c76706e3d0f9e2448f3644675f715b5, type: 3}
+  m_Script: {fileID: 11500000, guid: ec40ef1f118d6be4292d6e7683e0e183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reactionGameObject: {fileID: 268837553}
