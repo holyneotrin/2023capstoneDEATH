@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -127,38 +127,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2053819343}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6881555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6881550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b4bbb85cc4920469dcfce50cfc8ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1939473899}
 --- !u!1 &15587398 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 388876489497171537, guid: d0ddd93953187fd4195f9cea4a7b8a56,
     type: 3}
   m_PrefabInstance: {fileID: 303365307}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &15587403
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 15587398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b4bbb85cc4920469dcfce50cfc8ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1939473899}
 --- !u!1001 &303365307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,19 +228,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 406769638}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &321096984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 321096979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b4bbb85cc4920469dcfce50cfc8ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1939473899}
 --- !u!1001 &406769638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -713,6 +674,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1939473899}
+  apple: {fileID: 15587398}
+  tomato: {fileID: 321096979}
+  banana: {fileID: 6881550}
+  carrot: {fileID: 1755086701}
 --- !u!1001 &1029290404
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1082,19 +1047,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1207454273}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1755086706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1755086701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b4bbb85cc4920469dcfce50cfc8ed3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreText: {fileID: 1939473899}
 --- !u!1 &1939473897
 GameObject:
   m_ObjectHideFlags: 0

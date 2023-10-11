@@ -9,6 +9,11 @@ public class ScoreManager : MonoBehaviour
     public Text scoreText;
     private int score;
 
+    public GameObject apple;
+    public GameObject tomato;
+    public GameObject banana;
+    public GameObject carrot;
+
     // Start is called before the first frame update
     void Start()
     {
