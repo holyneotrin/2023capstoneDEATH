@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SpriteSquish : MonoBehaviour
 {
+    [Header("Remapping curves")]
     public AnimationCurve yBounceCurve;
     public AnimationCurve xBounceCurve;
+    public bool OnlyUseYCurve;
 
     
     public IEnumerator Bounce() {

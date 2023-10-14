@@ -7,8 +7,10 @@ public class ReactionProfile : MonoBehaviour
 {
     [Header("Sprite References")]
     public Sprite defaultSprite;
-    public Sprite happySprite;
-    public Sprite sadSprite;
+    public Sprite failSprite;
+    public Sprite angrySprite;
+    public Sprite loveSprite;
+    public Sprite successSprite;
 
     private List<ReactionCommand> reactionCommandList = new List<ReactionCommand>();
     private Image reactionImage; //This is the actual image of the npc
@@ -38,8 +40,10 @@ public class ReactionProfile : MonoBehaviour
             if (currentCommand.Duration <= 0f) {
                 reactionCommandList.RemoveAt(0); //Remove the first command.
 
-                //For testing do a bounce
-                StartCoroutine(spriteSquish.Bounce());
+                //if not empty then bounce
+                if (reactionCommandList.Count != 0) {
+                    StartCoroutine(spriteSquish.Bounce());
+                }       
             }
         } else {
             // Otherwise, show default.
@@ -50,6 +54,11 @@ public class ReactionProfile : MonoBehaviour
     //-------------------------------------------------------------------------------
 
     public void QueueReaction(ReactionCommand reactionCommand) { 
+        //If command queue is empty sprite bounce
+        if (reactionCommandList.Count == 0) {
+            StartCoroutine(spriteSquish.Bounce());
+        }
+
         //Add the reaction command to the list.
         reactionCommandList.Add(reactionCommand); 
     }
