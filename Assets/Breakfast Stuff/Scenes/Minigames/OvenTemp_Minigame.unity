@@ -598,6 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 763939715}
   - component: {fileID: 763939714}
+  - component: {fileID: 763939716}
   m_Layer: 0
   m_Name: --== MINIGAME LOGIC ==--
   m_TagString: Untagged
@@ -636,6 +637,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &763939716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763939713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b716826ffa70884ebd1b0a842c01de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: Set The Oven Temperature
+  instructions: Click and drag the slider to change the oven heat over time. Get
+    the oven as close to the goal as you can. Press the "Done" button when you're
+    finished, make sure not to get the oven too hot!
+  finished: 0
+  score: 0
 --- !u!1 &1103043918
 GameObject:
   m_ObjectHideFlags: 0
