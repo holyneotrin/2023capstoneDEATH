@@ -1647,6 +1647,9 @@ MonoBehaviour:
   InstructionsPanel: {fileID: 2022317494}
   InstructionTitleText: {fileID: 290863101}
   InstructionInstructionText: {fileID: 1278850066}
+  SceneNames:
+  - OvenTemp_Minigame
+  - DecorationMinigame
   Scores: []
 --- !u!1 &1608199485
 GameObject:
@@ -1798,7 +1801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2022317495
 RectTransform:
   m_ObjectHideFlags: 0

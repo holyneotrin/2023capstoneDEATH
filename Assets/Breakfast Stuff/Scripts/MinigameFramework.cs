@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MinigameFramework : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class MinigameFramework : MonoBehaviour
     public GameObject InstructionsPanel;
     public TextMeshProUGUI InstructionTitleText;
     public TextMeshProUGUI InstructionInstructionText;
+
+    [Header("Scenes")]
+    public string[] SceneNames;
+    private int sceneIndex;
 
     [Header("Scoring")]
     public List<float> Scores = new List<float>();
@@ -29,6 +34,27 @@ public class MinigameFramework : MonoBehaviour
     }
 
     void Start() {
+        LoadMinigame(0);
+        ShowInstructions();
+    }
+
+    // Function to load a scene by index
+    void LoadMinigame(int index) {
+        // Check if the index is within the bounds of the array
+        if (index >= 0 && index < SceneNames.Length) {
+            // Load the scene by name
+            SceneManager.LoadScene(SceneNames[index], LoadSceneMode.Additive);
+        }
+        else {
+            Debug.LogError("Invalid scene index");
+        }
+    }
+
+    [ContextMenu("LoadNextMinigameScene")]
+    public void LoadNextMinigame() {
+        SceneManager.UnloadSceneAsync(SceneNames[sceneIndex]);
+        sceneIndex++;
+        LoadMinigame(sceneIndex);
         ShowInstructions();
     }
 
