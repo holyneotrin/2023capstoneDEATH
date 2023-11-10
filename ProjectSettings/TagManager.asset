@@ -8,6 +8,9 @@ TagManager:
   - Banana
   - Carrot
   - Tomato
+  - Laser
+  - Enemy
+  - Clickable Food
   layers:
   - Default
   - TransparentFX
