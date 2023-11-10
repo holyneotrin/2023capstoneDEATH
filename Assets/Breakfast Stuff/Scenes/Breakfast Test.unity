@@ -219,9 +219,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3e890a6fc75d04d9f8f3d3e2a7d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultSprite: {fileID: 21300000, guid: f30408275f6879c4f906a1d11769b47e, type: 3}
-  happySprite: {fileID: 21300000, guid: cf4e1ad702f705d4c8ddc2f5ca63f4d8, type: 3}
-  sadSprite: {fileID: 21300000, guid: a81fad2656772a14c80025e931a13288, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 9b25fb5d7d321894ba8ce41bace748c5, type: 3}
+  failSprite: {fileID: 21300000, guid: 0d0a7def62b585e4fbf66d7ab4cc5b83, type: 3}
+  angrySprite: {fileID: 21300000, guid: 0b237860e11540848882ef1919842b63, type: 3}
+  loveSprite: {fileID: 21300000, guid: 58d7be06fd30de04384a5498aacbda78, type: 3}
+  successSprite: {fileID: 21300000, guid: 3497d1cdecfbeaa4a9ed10286b917e19, type: 3}
 --- !u!114 &268837555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +243,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 9b25fb5d7d321894ba8ce41bace748c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -276,7 +278,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -183, y: 196}
-  m_SizeDelta: {x: 252.88696, y: 392}
+  m_SizeDelta: {x: 392, y: 392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268837558
 MonoBehaviour:
@@ -303,14 +305,23 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.2410148
     - serializedVersion: 3
-      time: 0.33958754
-      value: 1.4976501
+      time: 0.27386793
+      value: 1.2224731
       inSlope: 0.016337961
       outSlope: 0.016337961
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.2845561
       outWeight: 0
+    - serializedVersion: 3
+      time: 0.39252287
+      value: 1.0345671
+      inSlope: -1.3515692
+      outSlope: -1.3515692
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
@@ -365,6 +376,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  OnlyUseYCurve: 0
 --- !u!1 &425165896
 GameObject:
   m_ObjectHideFlags: 0
