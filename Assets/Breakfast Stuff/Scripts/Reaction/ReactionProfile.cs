@@ -11,12 +11,22 @@ public class ReactionProfile : MonoBehaviour
     public Sprite angrySprite;
     public Sprite loveSprite;
     public Sprite successSprite;
+    public static ReactionProfile instance;
 
     private List<ReactionCommand> reactionCommandList = new List<ReactionCommand>();
     private Image reactionImage; //This is the actual image of the npc
     private SpriteSquish spriteSquish;
 
     //-------------------------------------------------------------------------------
+
+    //Defining as singleton
+        //Call like this:
+        //ReactionProfile.instance.QueueReactions();
+    void Awake() {
+        if (instance == null) {
+            instance = this;
+        }
+    }
 
     void Start() { 
         //Setup the reactionImage component
