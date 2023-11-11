@@ -14,6 +14,17 @@ public class Minigame : MonoBehaviour
     public bool finished = false;
     public float score = 0f;
 
+    public static Minigame instance;
+
+
+    //Defining as singleton
+        //Call like this:
+        //Minigame.instance
+    void Awake() {
+        if (instance == null) {
+            instance = this;
+        }
+    }
 
     void Start() {
         MinigameFramework.instance.SetTitleText(title);
