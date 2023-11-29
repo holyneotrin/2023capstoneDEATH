@@ -12,7 +12,7 @@ public class SpriteSquish : MonoBehaviour
     
     public IEnumerator Bounce() {
         //debug
-        Debug.Log("Bouncing");
+        //Debug.Log("Bouncing");
 
         float duration = .4f;
         Vector3 originalSize = transform.localScale;

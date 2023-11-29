@@ -21,7 +21,7 @@ public class ReactionProfile : MonoBehaviour
 
     //Defining as singleton
         //Call like this:
-        //ReactionProfile.instance.QueueReactions();
+        //ReactionProfile.instance.QueueReaction();
     void Awake() {
         if (instance == null) {
             instance = this;
@@ -63,13 +63,16 @@ public class ReactionProfile : MonoBehaviour
 
     //-------------------------------------------------------------------------------
 
+    private Coroutine currentCoroutine;
     public void QueueReaction(ReactionCommand reactionCommand) { 
         //If command queue is empty sprite bounce
-        if (reactionCommandList.Count == 0) {
-            StartCoroutine(spriteSquish.Bounce());
+        if (currentCoroutine != null) {
+            StopCoroutine(currentCoroutine);
         }
+        currentCoroutine = StartCoroutine(spriteSquish.Bounce());
 
         //Add the reaction command to the list.
+        reactionCommandList.Clear();
         reactionCommandList.Add(reactionCommand); 
     }
 
