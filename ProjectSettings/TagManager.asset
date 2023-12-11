@@ -9,6 +9,9 @@ TagManager:
   - Carrot
   - Tomato
   - HoverTarget
+  - Laser
+  - Enemy
+  - Clickable Food
   layers:
   - Default
   - TransparentFX
