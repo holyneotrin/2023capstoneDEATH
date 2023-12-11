@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Main Menu.unity
+    guid: 31b5d7101f1e4c64b926c1c778cc7919
   m_configObjects: {}
