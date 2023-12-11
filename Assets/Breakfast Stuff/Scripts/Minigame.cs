@@ -36,6 +36,8 @@ public class Minigame : MonoBehaviour
     }
 
     public void Finish() {
+        Debug.Log("Finishing Minigame");
+
         //if already done return
         if (finished) {
             Debug.LogError("Minigame Already Finished: Cannot call Minigame.Finish()");
@@ -44,6 +46,7 @@ public class Minigame : MonoBehaviour
 
         //send score to minigame base scene to record
         MinigameFramework.instance.Scores.Add(score);
+        MinigameFramework.instance.FinishMinigame();
         finished = true;
     }
 }

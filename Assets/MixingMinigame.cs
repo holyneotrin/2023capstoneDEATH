@@ -5,9 +5,15 @@ using UnityEngine;
 public class MixingMinigame : MonoBehaviour
 {
     public GameObject[] MixingTargets;
+    public int MixesCompleted = 0;
+    public int MixesNeeded = 5;
     
     private LineRenderer lineRenderer;
     private int lastClickedIndex = -1;
+
+    [Header("Audio")]
+    public AudioClip HitMixingTargetSound;
+    public AudioClip CompletedMixSound;
 
 
     void Start() {
@@ -40,7 +46,17 @@ public class MixingMinigame : MonoBehaviour
 
                     if (checkTargets()) {
                         ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
-                        MakeNewMixingPattern();
+                        MixesCompleted++;
+
+                        //Check score
+                        if (MixesCompleted >= MixesNeeded) {
+                            //Love react
+                            ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.loveSprite));
+                            //Finish minigame
+                            Minigame.instance.Finish();
+                        } else {
+                            MakeNewMixingPattern();
+                        }
                     }
                 }
             }

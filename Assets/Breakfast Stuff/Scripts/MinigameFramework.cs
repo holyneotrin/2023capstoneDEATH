@@ -9,6 +9,7 @@ public class MinigameFramework : MonoBehaviour
     [Header("References")]
     public TextMeshProUGUI TitleText;
     public GameObject InstructionsPanel;
+    public GameObject EndGamePanel;
     public TextMeshProUGUI InstructionTitleText;
     public TextMeshProUGUI InstructionInstructionText;
 
@@ -52,6 +53,7 @@ public class MinigameFramework : MonoBehaviour
 
     [ContextMenu("LoadNextMinigameScene")]
     public void LoadNextMinigame() {
+        EndGamePanel.SetActive(false);
         SceneManager.UnloadSceneAsync(SceneNames[sceneIndex]);
         sceneIndex++;
         LoadMinigame(sceneIndex);
@@ -73,5 +75,9 @@ public class MinigameFramework : MonoBehaviour
 
     public void HideInstructions() {
         InstructionsPanel.SetActive(false);
+    }
+
+    public void FinishMinigame() {
+        EndGamePanel.SetActive(true);
     }
 }
