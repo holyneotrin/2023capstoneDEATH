@@ -13,6 +13,7 @@ public class IngredientsManager : MonoBehaviour
     public Text butter;
     public Text milk;
     
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class IngredientsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
     }
 
     public void MakeDoneText(Text element)
