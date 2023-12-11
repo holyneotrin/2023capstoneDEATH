@@ -8,6 +8,7 @@ TagManager:
   - Banana
   - Carrot
   - Tomato
+  - HoverTarget
   - Laser
   - Enemy
   - Clickable Food
@@ -20,7 +21,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Line
   - 
   - 
   - 
@@ -47,4 +48,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer
+    uniqueID: 3604992735
     locked: 0
