@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class MixingMinigame : MonoBehaviour
 {
-    public GameObject MixingTarget1;
-    public GameObject MixingTarget2;
-    public GameObject MixingTarget3;
-    public GameObject MixingTarget4;
-
+    public GameObject[] MixingTargets;
+    
     private LineRenderer lineRenderer;
+    private int lastClickedIndex = -1;
 
 
     void Start() {
@@ -17,18 +15,59 @@ public class MixingMinigame : MonoBehaviour
         MakeNewMixingPattern();
     }
 
+    void Update() {
+        // Check for left mouse button down
+        if (Input.GetMouseButton(0)) {
+            // Get the mouse position in world coordinates
+            Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            // Perform a 2D raycast at the mouse position
+            RaycastHit2D hit = Physics2D.Raycast(mousePosition, Vector2.zero);
+
+            // Check if the raycast hit a collider
+            if (hit.collider != null 
+             && hit.collider.CompareTag("HoverTarget") ) {
+
+                // Get Mixing Target componenet
+                MixingTarget mixingTarget =  hit.collider.GetComponent<MixingTarget>();
+
+                if (mixingTarget != null && mixingTarget.clicked == false) {
+                    mixingTarget.clicked = true;
+
+                    lastClickedIndex++;
+
+                    Debug.Log("Target Hit");
+
+                    if (checkTargets()) {
+                        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
+                        MakeNewMixingPattern();
+                    }
+                }
+            }
+        }
+    }
+
+
+    private bool checkTargets() {
+        foreach (GameObject target in MixingTargets) {
+            if (target.GetComponent<MixingTarget>().clicked == false) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
     [ContextMenu("New Mixing Pattern")]
     public void MakeNewMixingPattern() {
-        SetRandomPosition(MixingTarget1);
-        SetRandomPosition(MixingTarget2);
-        SetRandomPosition(MixingTarget3);
-        SetRandomPosition(MixingTarget4);
+        lastClickedIndex = -1;
 
         List<Vector3> pos = new List<Vector3>();
-        pos.Add(MixingTarget1.transform.position);
-        pos.Add(MixingTarget2.transform.position);
-        pos.Add(MixingTarget3.transform.position);
-        pos.Add(MixingTarget4.transform.position);
+        foreach (GameObject target in MixingTargets) {
+            SetRandomPosition(target);
+            target.GetComponent<MixingTarget>().clicked = false;
+            pos.Add(target.transform.position);
+        }
 
         lineRenderer.SetPositions(pos.ToArray());
     }
