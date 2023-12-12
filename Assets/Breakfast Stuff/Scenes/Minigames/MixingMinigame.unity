@@ -365,8 +365,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 6
-    numCapVertices: 6
+    numCornerVertices: 10
+    numCapVertices: 10
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
@@ -392,8 +392,9 @@ MonoBehaviour:
   - {fileID: 2033429175}
   MixesCompleted: 0
   MixesNeeded: 5
-  HitMixingTargetSound: {fileID: 0}
-  CompletedMixSound: {fileID: 0}
+  HitMixingTargetSound: {fileID: 8300000, guid: 0f239b1fcafc5e34f96502d4de2fcd0b,
+    type: 3}
+  CompletedMixSound: {fileID: 8300000, guid: 0f239b1fcafc5e34f96502d4de2fcd0b, type: 3}
 --- !u!114 &270565974
 MonoBehaviour:
   m_ObjectHideFlags: 0

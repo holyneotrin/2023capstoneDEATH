@@ -41,17 +41,20 @@ public class MixingMinigame : MonoBehaviour
                     mixingTarget.clicked = true;
 
                     lastClickedIndex++;
+                    AudioManager.instance.PlaySound(HitMixingTargetSound,100f);
 
                     Debug.Log("Target Hit");
 
                     if (checkTargets()) {
                         ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
+                        MinigameFramework.instance.PlaySuccessSound();
                         MixesCompleted++;
 
                         //Check score
                         if (MixesCompleted >= MixesNeeded) {
                             //Love react
                             ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.loveSprite));
+                            MinigameFramework.instance.PlayLoveSound();
                             //Finish minigame
                             Minigame.instance.Finish();
                         } else {

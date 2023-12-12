@@ -18,6 +18,7 @@ public class OvenTempMinigame : MonoBehaviour
 
     [Header("Sounds")]
     public AudioClip DoneSound;
+    public AudioClip OvenSound;
 
     private bool isDone = false;
 
@@ -25,6 +26,7 @@ public class OvenTempMinigame : MonoBehaviour
     void Start() {
         //Randomize target value
         TargetSlider.value = UnityEngine.Random.Range(0.7f,0.9f);
+        AudioManager.instance.PlaySound(OvenSound,200f);
     }
 
     void Update() {
@@ -38,8 +40,10 @@ public class OvenTempMinigame : MonoBehaviour
 
     public void EndGame() {
         isDone = true;
-        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
-        AudioManager.instance.PlaySound(DoneSound, 100f);
+        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.loveSprite));
+        MinigameFramework.instance.PlayLoveSound();
+        // AudioManager.instance.PlaySound(DoneSound, 100f);
         Debug.Log("TargetTemp: " + TargetSlider.value + " | OvenTemp: " + OvenTempSlider.value);
+        Minigame.instance.Finish();
     }
 }

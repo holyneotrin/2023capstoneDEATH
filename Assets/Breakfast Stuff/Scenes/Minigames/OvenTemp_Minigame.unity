@@ -680,6 +680,7 @@ MonoBehaviour:
   ChangeTempSlider: {fileID: 1385852874}
   TempROC: 0.18
   DoneSound: {fileID: 8300000, guid: 7b958cef90027dd4eba203d313908da5, type: 3}
+  OvenSound: {fileID: 8300000, guid: c14162cf28133274586a9a56c007900e, type: 3}
 --- !u!4 &763939715
 Transform:
   m_ObjectHideFlags: 0

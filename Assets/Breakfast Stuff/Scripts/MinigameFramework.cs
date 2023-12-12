@@ -17,6 +17,12 @@ public class MinigameFramework : MonoBehaviour
     public string[] SceneNames;
     private int sceneIndex;
 
+    [Header("Minigame Sounds")]
+    public AudioClip SuccessSound;
+    public AudioClip FailSound;
+    public AudioClip LoveSound;
+    public AudioClip ButtonSound;
+
     [Header("Scoring")]
     public List<float> Scores = new List<float>();
 
@@ -37,6 +43,19 @@ public class MinigameFramework : MonoBehaviour
     void Start() {
         LoadMinigame(0);
         ShowInstructions();
+    }
+
+    public void PlayFailSound() {
+        AudioManager.instance.PlaySound(FailSound, 100f);
+    }
+    public void PlaySuccessSound() {
+        AudioManager.instance.PlaySound(SuccessSound, 100f);
+    }
+    public void PlayLoveSound() {
+        AudioManager.instance.PlaySound(LoveSound, 100f);
+    }
+    public void PlayButtonSound() {
+        AudioManager.instance.PlaySound(ButtonSound, 100f);
     }
 
     // Function to load a scene by index
