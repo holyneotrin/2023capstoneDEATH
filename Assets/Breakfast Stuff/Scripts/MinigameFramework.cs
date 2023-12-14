@@ -9,12 +9,19 @@ public class MinigameFramework : MonoBehaviour
     [Header("References")]
     public TextMeshProUGUI TitleText;
     public GameObject InstructionsPanel;
+    public GameObject EndGamePanel;
     public TextMeshProUGUI InstructionTitleText;
     public TextMeshProUGUI InstructionInstructionText;
 
     [Header("Scenes")]
     public string[] SceneNames;
     private int sceneIndex;
+
+    [Header("Minigame Sounds")]
+    public AudioClip SuccessSound;
+    public AudioClip FailSound;
+    public AudioClip LoveSound;
+    public AudioClip ButtonSound;
 
     [Header("Scoring")]
     public List<float> Scores = new List<float>();
@@ -38,6 +45,19 @@ public class MinigameFramework : MonoBehaviour
         ShowInstructions();
     }
 
+    public void PlayFailSound() {
+        AudioManager.instance.PlaySound(FailSound, 100f);
+    }
+    public void PlaySuccessSound() {
+        AudioManager.instance.PlaySound(SuccessSound, 100f);
+    }
+    public void PlayLoveSound() {
+        AudioManager.instance.PlaySound(LoveSound, 100f);
+    }
+    public void PlayButtonSound() {
+        AudioManager.instance.PlaySound(ButtonSound, 100f);
+    }
+
     // Function to load a scene by index
     void LoadMinigame(int index) {
         // Check if the index is within the bounds of the array
@@ -52,6 +72,7 @@ public class MinigameFramework : MonoBehaviour
 
     [ContextMenu("LoadNextMinigameScene")]
     public void LoadNextMinigame() {
+        EndGamePanel.SetActive(false);
         SceneManager.UnloadSceneAsync(SceneNames[sceneIndex]);
         sceneIndex++;
         LoadMinigame(sceneIndex);
@@ -73,5 +94,9 @@ public class MinigameFramework : MonoBehaviour
 
     public void HideInstructions() {
         InstructionsPanel.SetActive(false);
+    }
+
+    public void FinishMinigame() {
+        EndGamePanel.SetActive(true);
     }
 }
