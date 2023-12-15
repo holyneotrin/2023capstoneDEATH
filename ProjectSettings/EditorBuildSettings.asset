@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Breakfast Stuff/Scenes/Main Menu.unity
     guid: 31b5d7101f1e4c64b926c1c778cc7919
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Breakfast Test.unity
+    guid: b93146c7c4befeb41aa3848f69a3e849
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Minigames/MixingMinigame.unity
+    guid: d3466d2210a4d694ebea7e8357330de6
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Minigames/RollingMinigame.unity
+    guid: 3256f7d7012b41e4f801617ab23fc5f9
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Minigames/OvenTemp_Minigame.unity
+    guid: 09092e1786e40ad45bc48400d3d17391
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/Minigames/EndMinigame.unity
+    guid: 351f86b96a3b7674984639f209232ac8
+  - enabled: 1
+    path: Assets/Breakfast Stuff/Scenes/EndGameLandingPage.unity
+    guid: e75ffe737578b0a4698fa460658adeb6
   m_configObjects: {}
