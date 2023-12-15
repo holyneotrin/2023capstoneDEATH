@@ -28,11 +28,16 @@ public class IngredientsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
+        
     }
 
     public void MakeDoneText(Text element)
     {
         element.text = "";
+        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
     } 
+
+    public void GoodReact() {
+        ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.loveSprite));
+    }
 }
