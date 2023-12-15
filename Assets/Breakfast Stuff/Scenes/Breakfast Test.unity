@@ -2486,6 +2486,7 @@ MonoBehaviour:
   InstructionTitleText: {fileID: 290863101}
   InstructionInstructionText: {fileID: 1278850066}
   SceneNames:
+  - Ingredient Minigame
   - MixingMinigame
   - RollingMinigame
   - OvenTemp_Minigame
