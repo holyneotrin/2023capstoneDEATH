@@ -75,7 +75,8 @@ public class RollingMinigame : MonoBehaviour
     private void fuckUp() {
         Debug.Log("Fucked up");
         ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.angrySprite));
-        AudioManager.instance.PlaySound(badReact, 100f);
+        // AudioManager.instance.PlaySound(badReact, 100f);
+        MinigameFramework.instance.PlayFailSound();
         rollingResults[croissantIndex] = 0f;
         Croissants[croissantIndex].GetComponent<CroissantRollingAnimation>().FailCroissant();
         stopRolling();
@@ -84,7 +85,8 @@ public class RollingMinigame : MonoBehaviour
     private void doGood() {
         Debug.Log("Did good");
         ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.successSprite));
-        AudioManager.instance.PlaySound(goodReact, 100f);
+        // AudioManager.instance.PlaySound(goodReact, 100f);
+        MinigameFramework.instance.PlaySuccessSound();
         rollingResults[croissantIndex] = RollingProgressSlider.value;
     }
 
@@ -97,6 +99,8 @@ public class RollingMinigame : MonoBehaviour
         if (croissantIndex > 5) {
             //TODO: Record score
             Debug.Log("GAME OVER FUCKIGN STOP");
+            ReactionProfile.instance.QueueReaction(new ReactionCommand(ReactionProfile.instance.loveSprite));
+            MinigameFramework.instance.PlayLoveSound();
             Minigame.instance.Finish();
             //Destroy(this);
             Started = false;
