@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Breakfast Stuff/Scenes/Main Menu.unity
     guid: 31b5d7101f1e4c64b926c1c778cc7919
   - enabled: 1
+    path: Assets/Story/introStoryScene.unity
+    guid: 3f4f70b3bd1375145928362e29f59837
+  - enabled: 1
     path: Assets/Breakfast Stuff/Scenes/Breakfast Test.unity
     guid: b93146c7c4befeb41aa3848f69a3e849
   - enabled: 1
