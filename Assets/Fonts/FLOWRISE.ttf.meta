@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: a9d08878e4313344e867dc27a49b8161
+=======
 guid: 719ebf150ed719b4284979e6bbe88a44
+>>>>>>> main
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +15,12 @@ TrueTypeFontImporter:
   fontName: FLOWRISE
   fontNames:
   - FLOWRISE
+<<<<<<< HEAD
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d5542ae3310127640b051863211410fa, type: 3}
+=======
   fallbackFontReferences: []
+>>>>>>> main
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
